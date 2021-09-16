@@ -6,14 +6,14 @@
   font-style: normal;
 }
 :root {
-  background-color: #c1beaf;
-  box-shadow: #b1ad9e;
   --amplify-primary-color: #797b63;
+  --amplify-primary-tint: #c48969;
+  --amplify-primary-shade: #f0ede4;
+  background-color: #b1ad9e;
   --amplify-secondary-color: #c48969;
-  --amplify-tertiary-color: #c48969;
-  --amplify-font-family: "Analogue";
+  --amplify-font-family: "sofia_pro__condensed_8";
+
   --border-radius: 4;
-  --container-align: center;
 }
 
 * {
