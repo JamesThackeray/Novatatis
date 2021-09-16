@@ -17,16 +17,14 @@ function App() {
   return (
     <AmplifyAuthContainer>
       <AmplifyAuthenticator>
-        <>
-          <Router>
-            <NavBar />
-            <Switch>
-              <Route path="/" exact component={Projects} />
-              <Route path="/questionnaire" component={Questionnaire} />
-              <Route path="/profile" component={Profile} />
-            </Switch>
-          </Router>
-        </>
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route path="/" exact component={Projects} />
+            <Route path="/questionnaire" component={Questionnaire} />
+            <Route path="/profile" component={Profile} />
+          </Switch>
+        </Router>
       </AmplifyAuthenticator>
     </AmplifyAuthContainer>
   );
