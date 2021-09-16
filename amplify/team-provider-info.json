@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-novatitis-staging-212426-authRole",
+      "UnauthRoleArn": "arn:aws:iam::348540627033:role/amplify-novatitis-staging-212426-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::348540627033:role/amplify-novatitis-staging-212426-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-novatitis-staging-212426-deployment",
+      "UnauthRoleName": "amplify-novatitis-staging-212426-unauthRole",
+      "StackName": "amplify-novatitis-staging-212426",
+      "StackId": "arn:aws:cloudformation:eu-west-1:348540627033:stack/amplify-novatitis-staging-212426/7865abb0-1734-11ec-ad26-0ae1805c170d",
+      "AmplifyAppId": "d8rjqm58sb9au"
+    },
+    "categories": {
+      "auth": {
+        "Novatitis": {}
+      }
+    }
+  }
+}
