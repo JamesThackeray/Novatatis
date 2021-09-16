@@ -1,20 +1,31 @@
 @font-face {
-  font-family: 'sofia_pro__condensed_8';
-  src: url('sofiapro-condensed81-webfont.woff2') format('woff2'),
-       url('sofiapro-condensed81-webfont.woff') format('woff');
+  font-family: "sofia_pro__condensed_8";
+  src: url("sofiapro-condensed81-webfont.woff2") format("woff2"),
+    url("sofiapro-condensed81-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
+}
+:root {
+  background-color: #c1beaf;
+  box-shadow: #b1ad9e;
+  --amplify-primary-color: #797b63;
+  --amplify-secondary-color: #c48969;
+  --amplify-tertiary-color: #c48969;
+  --amplify-font-family: "Analogue";
+  --border-radius: 4;
+  --container-align: center;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'sofia_pro__condensed_8';
+  font-family: "sofia_pro__condensed_8";
 }
 
-.home, .reports, .products {
+.projects,
+.questionnaire,
+.profile {
   display: flex;
   height: 90vh;
   align-items: center;
