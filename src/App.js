@@ -4,9 +4,16 @@ import NavBar from './components/NavBar';
 import Projects from './Pages/Projects';
 import Questionnaire from './Pages/Questionnaire';
 import Profile from './Pages/Profile';
+import Amplify from "aws-amplify";
+import {AmplifyAuthContainer,AmplifyAuthenticator} from "@aws-amplify/ui-react";
+import awsconfig from "./aws-exports";
+
+Amplify.configure(awsconfig);
 
 function App() {
   return (
+    <AmplifyAuthContainer>
+    <AmplifyAuthenticator>
     <>
     <Router>
       <NavBar/>
@@ -17,6 +24,8 @@ function App() {
       </Switch>
     </Router>
     </>
+    </AmplifyAuthenticator>
+    </AmplifyAuthContainer>
   );
 }
 

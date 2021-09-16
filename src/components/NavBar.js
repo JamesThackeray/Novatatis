@@ -5,6 +5,8 @@ import  * as AiIcons from "react-icons/ai";
 import { SideBar } from './SideBarData';
 import "./NavBar.css";
 import {IconContext} from "react-icons";
+import {AmplifySignOut} from "@aws-amplify/ui-react";
+
 
 
 function NavBar() {
@@ -38,6 +40,7 @@ function NavBar() {
               )
           })}
         </ul>
+        <AmplifySignOut />
       </nav>
       </IconContext.Provider>
     </>
