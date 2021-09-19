@@ -10,6 +10,9 @@ import { CardContent, CardActions } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Button } from "bootstrap";
 
+import { API, graphqlOperation } from "aws-amplify";
+import { listProjects } from "../graphql/queries";
+
 import ModalUnstyled from "@mui/core/ModalUnstyled";
 
 /* view Projects 
@@ -25,7 +28,17 @@ class Projects extends React.Component {
     };
   }
 
-  componentDidMount() {}
+  getData = async () => {
+    try {
+      const result = await API.graphql(graphqlOperation(listProjects));
+      console.log("data", result);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  componentDidMount() {
+    this.getData();
+  }
 
   onClick = () => {
     console.log("open");

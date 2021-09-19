@@ -17,6 +17,18 @@ export declare class Design {
   constructor(init: ModelInit<Design>);
 }
 
+type ClientMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type ProjectsMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type DesignerMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
 export declare class Client {
   readonly id: string;
   readonly firstName?: string;
@@ -24,8 +36,10 @@ export declare class Client {
   readonly email?: string;
   readonly phoneNumber?: string;
   readonly ClientProjects?: (Projects | null)[];
-  constructor(init: ModelInit<Client>);
-  static copyOf(source: Client, mutator: (draft: MutableModel<Client>) => MutableModel<Client> | void): Client;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Client, ClientMetaData>);
+  static copyOf(source: Client, mutator: (draft: MutableModel<Client, ClientMetaData>) => MutableModel<Client, ClientMetaData> | void): Client;
 }
 
 export declare class Projects {
@@ -45,8 +59,10 @@ export declare class Projects {
   readonly Address: string;
   readonly designerID?: string;
   readonly clientID?: string;
-  constructor(init: ModelInit<Projects>);
-  static copyOf(source: Projects, mutator: (draft: MutableModel<Projects>) => MutableModel<Projects> | void): Projects;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Projects, ProjectsMetaData>);
+  static copyOf(source: Projects, mutator: (draft: MutableModel<Projects, ProjectsMetaData>) => MutableModel<Projects, ProjectsMetaData> | void): Projects;
 }
 
 export declare class Designer {
@@ -55,6 +71,8 @@ export declare class Designer {
   readonly lastName?: string;
   readonly email?: string;
   readonly designerProjects?: (Projects | null)[];
-  constructor(init: ModelInit<Designer>);
-  static copyOf(source: Designer, mutator: (draft: MutableModel<Designer>) => MutableModel<Designer> | void): Designer;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Designer, DesignerMetaData>);
+  static copyOf(source: Designer, mutator: (draft: MutableModel<Designer, DesignerMetaData>) => MutableModel<Designer, DesignerMetaData> | void): Designer;
 }
