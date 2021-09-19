@@ -8,8 +8,9 @@ import { Typography } from "@mui/material";
 import { Button } from "bootstrap";
 import { API, graphqlOperation } from "aws-amplify";
 import { listProjects } from "../graphql/queries";
-import ModalUnstyled from "@mui/core/ModalUnstyled";
+import { Modal } from "react-bootstrap";
 import ViewProjectDetails from "../components/ViewProjectDetails";
+import Paper from "@mui/material/Paper";
 
 /*
       request to cancel 
@@ -20,12 +21,22 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      openRequest: false,
+      RequestShow: false,
       openView: false,
       projects: [],
       selectedProject: "",
     };
+    this.showRequestModal = this.showRequestModal.bind(this);
+    this.hideRequestModal = this.hideRequestModal.bind(this);
   }
+
+  showRequestModal = () => {
+    this.setState({ RequestShow: true });
+  };
+
+  hideRequestModal = () => {
+    this.setState({ RequestShow: false });
+  };
 
   getData = async () => {
     try {
@@ -41,15 +52,12 @@ class Project extends React.Component {
     this.getData();
   }
 
-  onClickRequest = () => {
-    console.log("open");
-    this.setState({ openRequest: true });
+  handleRequestClose = () => {
+    this.setState({ RequestShow: false });
   };
 
-  handleRequest = () => {};
-
-  handleClose = () => {
-    this.setState({ openRequest: false, openView: false });
+  handleViewClose = () => {
+    this.setState({ openView: false });
   };
 
   projectDetails = (projectid) => {
@@ -112,33 +120,36 @@ class Project extends React.Component {
             <button
               type="button"
               className="request"
-              onClick={this.onClickRequest}
+              onClick={this.showRequestModal}
             >
               Request A Project
             </button>
-            <ModalUnstyled
-              open={this.state.openRequest}
-              onClose={this.handleClose}
+            <Modal
+              show={this.state.RequestShow}
+              className="modal"
+              onHide={() => {
+                this.handleRequestClose();
+              }}
             >
-              <RequestModal
-                close={this.handleClose}
-                request={this.handleRequest}
-              />
-            </ModalUnstyled>
+              <RequestModal close={this.handleRequestClose} />
+            </Modal>
           </div>
           <Container fixed className="projectsList">
             {this.viewProjects()}
-            <ModalUnstyled
-              open={this.state.openView}
-              onClose={this.handleClose}
+            <Modal
+              show={this.state.openView}
+              className="modal"
+              onHide={() => {
+                this.handleViewClose();
+              }}
             >
-              <ViewProjectDetails />
-            </ModalUnstyled>
+              {this.viewProjects()}
+            </Modal>
           </Container>
         </div>
       </>
     );
   }
-} /* */
+}
 
 export default Project;

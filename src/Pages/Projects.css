@@ -35,3 +35,11 @@
 .projectsList {
   margin-top: 2vh;
 }
+
+.modal {
+  margin: 0;
+  position: absolute;
+  background: #f0ede4;
+  width: 100vw;
+  height: 100vh;
+}
