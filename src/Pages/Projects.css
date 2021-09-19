@@ -8,6 +8,19 @@
   font-size: 1.5rem;
   margin-top: 1vh;
 }
+.view {
+  background-color: #90b083;
+  color: #f0ede4;
+  width: 100%;
+  height: 8vh;
+  font-family: "sofia_pro__condensed_8";
+  border-style: none;
+  font-size: 1.3rem;
+}
+.view:hover {
+  background-color: #c1beaf;
+}
+
 .request:hover {
   background-color: #c1beaf;
 }
@@ -17,4 +30,8 @@
   font-style: normal;
   font-family: "Analogue";
   font-size: larger;
+}
+
+.projectsList {
+  margin-top: 2vh;
 }

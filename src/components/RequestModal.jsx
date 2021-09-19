@@ -21,7 +21,8 @@ onSave = () =>{
 
   render(){
   return (
-    <Card sx={{ minWidth: 275 }} className="ion-popover-menu">
+    <div className="modal">
+    <Card sx={{ minWidth: 275 }} >
       <CardContent>
     hi
     </CardContent>
@@ -47,6 +48,7 @@ onSave = () =>{
     </Button>
     </CardActions>
   </Card>
+  </div>
   );
 }
 }

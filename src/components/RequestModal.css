@@ -1,14 +1,11 @@
-.ion-popover-menu {
-  top: 0 !important;
-  left: inherit !important;
-  right: 0;
-  transform-origin: right top !important;
-  --min-height: 10%;
-  box-shadow: -8px 0 16px rgba(0, 0, 0, 0.12);
-  border-radius: 0;
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400;
+  background-color: lightgray;
+  border: 2px solid #000;
+  box-shadow: 24;
+  padding: 4;
 }

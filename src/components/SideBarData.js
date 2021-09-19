@@ -1,26 +1,25 @@
-import React from 'react'
-import  * as FaIcons from "react-icons/fa";
-import  * as AiIcons from "react-icons/ai";
-import  * as RiIcons from "react-icons/ri";
-import  * as CgIcons from "react-icons/cg";
+import React from "react";
+import * as AiIcons from "react-icons/ai";
+import * as RiIcons from "react-icons/ri";
+import * as CgIcons from "react-icons/cg";
 
 export const SideBar = [
   {
-    title: 'Projects',
-    path:"/",
+    title: "Projects",
+    path: "/",
     icon: <AiIcons.AiFillHome />,
-    cName: 'nav-text'
+    cName: "nav-text",
   },
   {
-    title: 'Questionnaire',
-    path:"/questionnaire",
+    title: "Questionnaire",
+    path: "/questionnaire",
     icon: <RiIcons.RiQuestionnaireFill />,
-    cName: 'nav-text'
+    cName: "nav-text",
   },
   {
-    title: 'Profile',
-    path:"/profile",
+    title: "Profile",
+    path: "/profile",
     icon: <CgIcons.CgProfile />,
-    cName: 'nav-text'
-  }
-]
+    cName: "nav-text",
+  },
+];
