@@ -5,18 +5,11 @@ import RequestModal from "../components/RequestModal";
 import { Grid } from "@mui/material";
 import { CardContent, CardActions } from "@mui/material";
 import { Typography } from "@mui/material";
-import { Button } from "bootstrap";
 import { API, graphqlOperation } from "aws-amplify";
 import { listProjects } from "../graphql/queries";
 import { Modal } from "react-bootstrap";
 import ViewProjectDetails from "../components/ViewProjectDetails";
-import Paper from "@mui/material/Paper";
 
-/*
-      request to cancel 
-      view designs 
-        give feedback 
-  request projects */
 class Project extends React.Component {
   constructor(props) {
     super(props);
@@ -143,7 +136,11 @@ class Project extends React.Component {
                 this.handleViewClose();
               }}
             >
-              {this.viewProjects()}
+              <ViewProjectDetails
+                projects={this.state.projects}
+                selectedProject={this.state.selectedProject}
+                close={this.handleViewClose}
+              />
             </Modal>
           </Container>
         </div>
