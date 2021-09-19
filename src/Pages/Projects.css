@@ -1,0 +1,20 @@
+.request {
+  background-color: #c48969;
+  color: #f0ede4;
+  width: 100vw;
+  height: 8vh;
+  font-family: "sofia_pro__condensed_8";
+  border-style: none;
+  font-size: 1.5rem;
+  margin-top: 1vh;
+}
+.request:hover {
+  background-color: #c1beaf;
+}
+
+.Text {
+  color: #f7f3df;
+  font-style: normal;
+  font-family: "Analogue";
+  font-size: larger;
+}

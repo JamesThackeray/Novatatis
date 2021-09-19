@@ -1,0 +1,49 @@
+type Plans {
+  FloorPlan: [AWSURL]
+  ElevationAndSection: [AWSURL]
+  SitePlan: [AWSURL]
+  Details: [AWSURL]
+  Renders: [AWSURL]
+}
+
+type Design {
+  design: AWSURL
+  feedback: String
+}
+
+type Client @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  firstName: String
+  lastName: String
+  email: String
+  phoneNumber: String
+  ClientProjects: [Projects] @connection(keyName: "byClient", fields: ["id"])
+}
+
+type Designer @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  firstName: String
+  lastName: String
+  email: String
+  designerProjects: [Projects] @connection(keyName: "byDesigner", fields: ["id"])
+}
+
+type Projects @model @auth(rules: [{allow: public}]) @key(name: "byDesigner", fields: ["designerID"]) @key(name: "byClient", fields: ["clientID"]) {
+  id: ID!
+  Budget: String!
+  designerId: String
+  clientId: String!
+  Status: String!
+  SquareMeterage: Int
+  ShoppingList: AWSURL
+  Room: String!
+  PresentationBoards: AWSJSON
+  Plans: [Plans]
+  Designs: [Design]
+  DateStarted: AWSDate!
+  DateFinished: AWSDate
+  Address: String!
+  designerID: ID
+  clientID: ID
+}
+ 

@@ -1,8 +1,8 @@
 {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "novati4972fcaf",
-    "userPoolName": "Novatitis",
+    "resourceNameTruncated": "system736f4611",
+    "userPoolName": "System",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -12,10 +12,10 @@
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Forgot password code from Savvy Interiors: {####}",
-    "emailVerificationMessage": "Hi there, \nIt seems you forgot your password.\nForgot password code: {####}\n\nif not, please ignore\nthanks,\nSavvy Interior Team",
+    "emailVerificationSubject": "Forgot password code: {####}",
+    "emailVerificationMessage": "Forgot password code: {####}",
     "defaultPasswordPolicy": false,
-    "passwordPolicyMinLength": 8,
+    "passwordPolicyMinLength": 6,
     "passwordPolicyCharacters": [
         "Requires Lowercase",
         "Requires Numbers",
@@ -30,10 +30,10 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "Novati4972fcaf_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "System736f4611_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "4972fcaf",
-    "resourceName": "Novatitis",
+    "sharedId": "736f4611",
+    "resourceName": "System",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
