@@ -3,7 +3,7 @@ import { Grid } from "@mui/material";
 import { CardContent, CardActions } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Card } from "@mui/material";
-import { API, graphqlOperation, Auth } from "aws-amplify";
+import { API, graphqlOperation } from "aws-amplify";
 import { updateProjects } from "../graphql/mutations";
 
 class ViewProjectDetails extends React.Component {
@@ -86,7 +86,6 @@ class ViewProjectDetails extends React.Component {
         id: this.state.selectedProject,
         Status: "Please Cancel",
       };
-      console.log("input", input);
       const result = await API.graphql(
         graphqlOperation(updateProjects, { input })
       );
