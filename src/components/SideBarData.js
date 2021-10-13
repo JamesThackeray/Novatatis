@@ -23,3 +23,24 @@ export const SideBar = [
     cName: "nav-text",
   },
 ];
+
+export const AdminSideBar = [
+  {
+    title: "All Projects",
+    path: "/",
+    icon: <AiIcons.AiFillHome />,
+    cName: "nav-text",
+  },
+  {
+    title: "Clients",
+    path: "/clients",
+    icon: <CgIcons.CgProfile />,
+    cName: "nav-text",
+  },
+  {
+    title: "Reports",
+    path: "/reports",
+    icon: <CgIcons.CgFile />,
+    cName: "nav-text",
+  },
+];

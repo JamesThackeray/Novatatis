@@ -24,7 +24,10 @@
 
 .project,
 .questionnaire,
-.profile {
+.profile,
+.report,
+.adminprojects,
+.clients {
   display: flex;
   align-items: center;
 }

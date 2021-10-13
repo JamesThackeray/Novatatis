@@ -2,14 +2,14 @@
   background-color: #797b63;
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 .Title {
   color: #f0ede4;
   font-family: "Analogue";
-  margin-left: 38vw;
-  font-size: 2rem;
+  margin-left: 2.5rem;
+  font-size: 7vw;
 }
 
 .menu-bars {
@@ -39,7 +39,7 @@
 
 .nav-text {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: 8px 0px 8px 16px;
   list-style: none;
