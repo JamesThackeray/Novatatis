@@ -21,6 +21,12 @@
   background-color: #c1beaf;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
 .request:hover {
   background-color: #c1beaf;
 }

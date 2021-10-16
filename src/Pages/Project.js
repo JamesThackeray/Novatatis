@@ -18,6 +18,7 @@ class Project extends React.Component {
       openView: false,
       projects: [],
       selectedProject: "",
+      clientId: "",
     };
     this.showRequestModal = this.showRequestModal.bind(this);
     this.hideRequestModal = this.hideRequestModal.bind(this);
@@ -30,11 +31,25 @@ class Project extends React.Component {
   hideRequestModal = () => {
     this.setState({ RequestShow: false });
   };
+  setClientId = () => {
+    try {
+      await Auth.currentUserInfo().then((user) => {
+        this.setState({
+          clientId: user.username,
+        });
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   getData = async () => {
     try {
       const result = await API.graphql(graphqlOperation(listProjects));
       const projects = result.data.listProjects.items;
+      const temp = projects.filter(
+        (project) => project.clientId === this.state.clientId
+      );
       this.setState({ projects });
       console.log("state", projects);
     } catch (err) {
@@ -42,6 +57,7 @@ class Project extends React.Component {
     }
   };
   componentDidMount() {
+    this.setClientId();
     this.getData();
   }
 
@@ -62,12 +78,12 @@ class Project extends React.Component {
       <div>
         <Grid
           container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
+          spacing={{ xs: 1, md: 3 }}
+          columns={{ xs: 2, sm: 8, md: 12 }}
         >
           {this.state.projects.map((index) => {
             return (
-              <Grid item xs={4} key={index.id}>
+              <Grid item xs={2} sm={4} md={4} key={index}>
                 <Card sx={{ minWidth: 275 }}>
                   <CardContent>
                     <Typography

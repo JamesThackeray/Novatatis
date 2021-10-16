@@ -62,12 +62,12 @@ class AdminProjects extends React.Component {
       <div>
         <Grid
           container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
+          spacing={{ xs: 1, md: 3 }}
+          columns={{ xs: 2, sm: 8, md: 12 }}
         >
           {this.state.projects.map((index) => {
             return (
-              <Grid item xs={4} key={index.id}>
+              <Grid item xs={2} sm={4} md={4} key={index}>
                 <Card sx={{ minWidth: 275 }}>
                   <CardContent>
                     <Typography
