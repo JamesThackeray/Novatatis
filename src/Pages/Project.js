@@ -5,7 +5,7 @@ import RequestModal from "../components/RequestModal";
 import { Grid } from "@mui/material";
 import { CardContent, CardActions } from "@mui/material";
 import { Typography } from "@mui/material";
-import { API, graphqlOperation } from "aws-amplify";
+import { API, graphqlOperation, Auth } from "aws-amplify";
 import { listProjects } from "../graphql/queries";
 import { Modal } from "react-bootstrap";
 import ViewProjectDetails from "../components/ViewProjectDetails";
@@ -31,7 +31,7 @@ class Project extends React.Component {
   hideRequestModal = () => {
     this.setState({ RequestShow: false });
   };
-  setClientId = () => {
+  setClientId = async () => {
     try {
       await Auth.currentUserInfo().then((user) => {
         this.setState({
