@@ -6,7 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { API, graphqlOperation, Auth } from "aws-amplify";
+import { API, graphqlOperation } from "aws-amplify";
 import { listClients } from "../graphql/queries";
 
 class Clients extends React.Component {

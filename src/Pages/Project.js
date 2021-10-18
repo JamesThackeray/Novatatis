@@ -50,8 +50,8 @@ class Project extends React.Component {
       const temp = projects.filter(
         (project) => project.clientId === this.state.clientId
       );
-      this.setState({ projects });
-      console.log("state", projects);
+      this.setState({ projects: temp });
+      console.log("state", temp);
     } catch (err) {
       console.log(err);
     }
