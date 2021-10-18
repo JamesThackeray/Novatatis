@@ -18,11 +18,11 @@
       "function": {
         "systemlayer80d78e73": {
           "deploymentBucketName": "amplify-system-staging-225425-deployment",
-          "s3Key": "amplify-builds/systemlayer80d78e73-LambdaLayerVersionb498e781-build.zip"
+          "s3Key": "amplify-builds/systemlayer80d78e73-LambdaLayerVersionb1d4adf1-build.zip"
         },
         "CreateClientTrigger": {
           "deploymentBucketName": "amplify-system-staging-225425-deployment",
-          "s3Key": "amplify-builds/CreateClientTrigger-32387741614a46464f74-build.zip"
+          "s3Key": "amplify-builds/CreateClientTrigger-6e4b64774f4556347a44-build.zip"
         }
       }
     }

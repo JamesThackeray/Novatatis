@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
@@ -45,22 +45,38 @@ class Clients extends React.Component {
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
                 <TableRow className="tableTitle">
+                  <TableCell>Email</TableCell>
                   <TableCell>Name</TableCell>
-                  <TableCell>Number projects</TableCell>
+                  <TableCell>Phone Number</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 {this.state.clients.map((row) => (
-                  <TableRow key={row.firstName}>
+                  <TableRow key={row.email}>
+                    <TableCell
+                      component="th"
+                      scope="row"
+                      align={row.email}
+                      style={{ minWidth: row.email }}
+                    >
+                      {row.email}
+                    </TableCell>
                     <TableCell
                       component="th"
                       scope="row"
                       align={row.firstName}
-                      style={{ minWidth: row.firstName }}
+                      style={{ minWidth: row.firstName + " " + row.lastName }}
                     >
                       {row.firstName + " " + row.lastName}
                     </TableCell>
-                    <TableCell>{row.email}</TableCell>
+                    <TableCell
+                      component="th"
+                      scope="row"
+                      align={row.phoneNumber}
+                      style={{ minWidth: row.phoneNumber }}
+                    >
+                      {row.phoneNumber}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
