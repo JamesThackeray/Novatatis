@@ -17,10 +17,6 @@ export declare class Design {
   constructor(init: ModelInit<Design>);
 }
 
-type UserMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
-}
-
 type ClientMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
@@ -31,15 +27,6 @@ type ProjectsMetaData = {
 
 type DesignerMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
-}
-
-export declare class User {
-  readonly id: string;
-  readonly email?: string;
-  readonly createdAt?: string;
-  readonly updatedAt?: string;
-  constructor(init: ModelInit<User, UserMetaData>);
-  static copyOf(source: User, mutator: (draft: MutableModel<User, UserMetaData>) => MutableModel<User, UserMetaData> | void): User;
 }
 
 export declare class Client {
@@ -57,21 +44,20 @@ export declare class Client {
 
 export declare class Projects {
   readonly id: string;
-  readonly Budget: string;
-  readonly designerId?: string;
-  readonly clientId: string;
-  readonly Status: string;
+  readonly Budget?: string;
+  readonly Status?: string;
   readonly SquareMeterage?: number;
   readonly ShoppingList?: string;
-  readonly Room: string;
+  readonly Room?: string;
   readonly PresentationBoards?: string;
   readonly Plans?: (Plans | null)[];
   readonly Designs?: (Design | null)[];
-  readonly DateStarted: string;
+  readonly DateStarted?: string;
   readonly DateFinished?: string;
-  readonly Address: string;
+  readonly Address?: string;
   readonly designerID?: string;
   readonly clientID?: string;
+  readonly clientId?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<Projects, ProjectsMetaData>);

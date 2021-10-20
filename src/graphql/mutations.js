@@ -21,8 +21,6 @@ export const createClient = /* GraphQL */ `
         items {
           id
           Budget
-          designerId
-          clientId
           Status
           SquareMeterage
           ShoppingList
@@ -33,6 +31,7 @@ export const createClient = /* GraphQL */ `
           Address
           designerID
           clientID
+          clientId
           _version
           _deleted
           _lastChangedAt
@@ -65,8 +64,6 @@ export const updateClient = /* GraphQL */ `
         items {
           id
           Budget
-          designerId
-          clientId
           Status
           SquareMeterage
           ShoppingList
@@ -77,6 +74,7 @@ export const updateClient = /* GraphQL */ `
           Address
           designerID
           clientID
+          clientId
           _version
           _deleted
           _lastChangedAt
@@ -109,8 +107,6 @@ export const deleteClient = /* GraphQL */ `
         items {
           id
           Budget
-          designerId
-          clientId
           Status
           SquareMeterage
           ShoppingList
@@ -121,6 +117,7 @@ export const deleteClient = /* GraphQL */ `
           Address
           designerID
           clientID
+          clientId
           _version
           _deleted
           _lastChangedAt
@@ -152,8 +149,6 @@ export const createDesigner = /* GraphQL */ `
         items {
           id
           Budget
-          designerId
-          clientId
           Status
           SquareMeterage
           ShoppingList
@@ -164,6 +159,7 @@ export const createDesigner = /* GraphQL */ `
           Address
           designerID
           clientID
+          clientId
           _version
           _deleted
           _lastChangedAt
@@ -195,8 +191,6 @@ export const updateDesigner = /* GraphQL */ `
         items {
           id
           Budget
-          designerId
-          clientId
           Status
           SquareMeterage
           ShoppingList
@@ -207,6 +201,7 @@ export const updateDesigner = /* GraphQL */ `
           Address
           designerID
           clientID
+          clientId
           _version
           _deleted
           _lastChangedAt
@@ -238,8 +233,6 @@ export const deleteDesigner = /* GraphQL */ `
         items {
           id
           Budget
-          designerId
-          clientId
           Status
           SquareMeterage
           ShoppingList
@@ -250,6 +243,7 @@ export const deleteDesigner = /* GraphQL */ `
           Address
           designerID
           clientID
+          clientId
           _version
           _deleted
           _lastChangedAt
@@ -270,8 +264,6 @@ export const createProjects = /* GraphQL */ `
     createProjects(input: $input, condition: $condition) {
       id
       Budget
-      designerId
-      clientId
       Status
       SquareMeterage
       ShoppingList
@@ -293,6 +285,7 @@ export const createProjects = /* GraphQL */ `
       Address
       designerID
       clientID
+      clientId
       _version
       _deleted
       _lastChangedAt
@@ -309,8 +302,6 @@ export const updateProjects = /* GraphQL */ `
     updateProjects(input: $input, condition: $condition) {
       id
       Budget
-      designerId
-      clientId
       Status
       SquareMeterage
       ShoppingList
@@ -332,6 +323,7 @@ export const updateProjects = /* GraphQL */ `
       Address
       designerID
       clientID
+      clientId
       _version
       _deleted
       _lastChangedAt
@@ -348,8 +340,6 @@ export const deleteProjects = /* GraphQL */ `
     deleteProjects(input: $input, condition: $condition) {
       id
       Budget
-      designerId
-      clientId
       Status
       SquareMeterage
       ShoppingList
@@ -371,6 +361,7 @@ export const deleteProjects = /* GraphQL */ `
       Address
       designerID
       clientID
+      clientId
       _version
       _deleted
       _lastChangedAt

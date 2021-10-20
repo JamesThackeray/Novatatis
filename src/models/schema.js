@@ -1,48 +1,5 @@
 export const schema = {
     "models": {
-        "User": {
-            "name": "User",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "email": {
-                    "name": "email",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                }
-            },
-            "syncable": true,
-            "pluralName": "Users",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                }
-            ]
-        },
         "Client": {
             "name": "Client",
             "fields": {
@@ -151,28 +108,14 @@ export const schema = {
                     "name": "Budget",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "designerId": {
-                    "name": "designerId",
-                    "isArray": false,
-                    "type": "String",
                     "isRequired": false,
-                    "attributes": []
-                },
-                "clientId": {
-                    "name": "clientId",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": true,
                     "attributes": []
                 },
                 "Status": {
                     "name": "Status",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "SquareMeterage": {
@@ -193,7 +136,7 @@ export const schema = {
                     "name": "Room",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "PresentationBoards": {
@@ -227,7 +170,7 @@ export const schema = {
                     "name": "DateStarted",
                     "isArray": false,
                     "type": "AWSDate",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "DateFinished": {
@@ -241,7 +184,7 @@ export const schema = {
                     "name": "Address",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "designerID": {
@@ -255,6 +198,13 @@ export const schema = {
                     "name": "clientID",
                     "isArray": false,
                     "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "clientId": {
+                    "name": "clientId",
+                    "isArray": false,
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -473,5 +423,5 @@ export const schema = {
             }
         }
     },
-    "version": "82a111ced4e4677586d8f3f7fc743788"
+    "version": "4a2278ee581ba08cbc04147671579704"
 };

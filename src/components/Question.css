@@ -1,0 +1,25 @@
+.Textbox {
+  width: 30vw;
+  height: 10vh;
+  font-size: 2rem;
+}
+
+.button {
+  background-color: #90b083;
+  color: #f0ede4;
+  width: 20vw;
+  height: 6vh;
+  font-family: "sofia_pro__condensed_8";
+  border-style: none;
+  font-size: 1.3rem;
+  margin-top: 5vh;
+}
+.control {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.question {
+  margin-top: 5vh;
+  font-size: 2rem;
+  font-family: "sofia_pro__condensed_8";
+}

@@ -1,0 +1,12 @@
+.button {
+  background-color: #90b083;
+  color: #f0ede4;
+  width: 20vw;
+  height: 6vh;
+  font-family: "sofia_pro__condensed_8";
+  border-style: none;
+  font-size: 1.3rem;
+}
+.title {
+  margin-top: 5vh;
+}

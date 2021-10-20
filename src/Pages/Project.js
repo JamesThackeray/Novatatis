@@ -47,8 +47,10 @@ class Project extends React.Component {
     try {
       const result = await API.graphql(graphqlOperation(listProjects));
       const projects = result.data.listProjects.items;
+      const user = await Auth.currentAuthenticatedUser();
+      console.log(projects);
       const temp = projects.filter(
-        (project) => project.clientId === this.state.clientId
+        (project) => project.clientId === user.attributes.sub
       );
       this.setState({ projects: temp });
       console.log("state", temp);
@@ -57,7 +59,6 @@ class Project extends React.Component {
     }
   };
   componentDidMount() {
-    this.setClientId();
     this.getData();
   }
 
@@ -84,7 +85,7 @@ class Project extends React.Component {
           {this.state.projects.map((index) => {
             return (
               <Grid item xs={2} sm={4} md={4} key={index}>
-                <Card sx={{ minWidth: 275 }}>
+                <Card sx={{ minWidth: 275 }} key={index.projectid}>
                   <CardContent>
                     <Typography
                       sx={{ fontSize: 14 }}

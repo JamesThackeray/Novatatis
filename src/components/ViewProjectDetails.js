@@ -80,16 +80,17 @@ class ViewProjectDetails extends React.Component {
     }
   };
 
-  requesttoCancel = async () => {
+  requesttoCancel = async (event) => {
+    event.preventDefault();
     try {
-      const input = {
+      const details = {
         id: this.state.selectedProject,
         Status: "Please Cancel",
       };
-      const result = await API.graphql(
-        graphqlOperation(updateProjects, { input })
+      const response = await API.graphql(
+        graphqlOperation(updateProjects, { input: details })
       );
-      console.log("cancel", result);
+      console.log("response", response);
     } catch (err) {
       console.log(err);
     }
@@ -114,8 +115,8 @@ class ViewProjectDetails extends React.Component {
           <button
             type="button"
             className="close-btn"
-            onClick={() => {
-              this.requesttoCancel();
+            onClick={(event) => {
+              this.requesttoCancel(event);
             }}
           >
             Cancel Project

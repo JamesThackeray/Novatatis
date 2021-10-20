@@ -18,8 +18,6 @@ export const getClient = /* GraphQL */ `
         items {
           id
           Budget
-          designerId
-          clientId
           Status
           SquareMeterage
           ShoppingList
@@ -30,6 +28,7 @@ export const getClient = /* GraphQL */ `
           Address
           designerID
           clientID
+          clientId
           _version
           _deleted
           _lastChangedAt
@@ -120,8 +119,6 @@ export const getDesigner = /* GraphQL */ `
         items {
           id
           Budget
-          designerId
-          clientId
           Status
           SquareMeterage
           ShoppingList
@@ -132,6 +129,7 @@ export const getDesigner = /* GraphQL */ `
           Address
           designerID
           clientID
+          clientId
           _version
           _deleted
           _lastChangedAt
@@ -209,8 +207,6 @@ export const getProjects = /* GraphQL */ `
     getProjects(id: $id) {
       id
       Budget
-      designerId
-      clientId
       Status
       SquareMeterage
       ShoppingList
@@ -232,6 +228,7 @@ export const getProjects = /* GraphQL */ `
       Address
       designerID
       clientID
+      clientId
       _version
       _deleted
       _lastChangedAt
@@ -250,8 +247,6 @@ export const listProjects = /* GraphQL */ `
       items {
         id
         Budget
-        designerId
-        clientId
         Status
         SquareMeterage
         ShoppingList
@@ -273,6 +268,7 @@ export const listProjects = /* GraphQL */ `
         Address
         designerID
         clientID
+        clientId
         _version
         _deleted
         _lastChangedAt
@@ -300,8 +296,6 @@ export const syncProjects = /* GraphQL */ `
       items {
         id
         Budget
-        designerId
-        clientId
         Status
         SquareMeterage
         ShoppingList
@@ -323,6 +317,7 @@ export const syncProjects = /* GraphQL */ `
         Address
         designerID
         clientID
+        clientId
         _version
         _deleted
         _lastChangedAt

@@ -1,8 +1,3 @@
-type User @model {
-  id: ID!
-  email: String
-}
-
 type Plans {
   FloorPlan: [AWSURL]
   ElevationAndSection: [AWSURL]
@@ -16,7 +11,7 @@ type Design {
   feedback: String
 }
 
-type Client @model @auth(rules: [{ allow: public }]) {
+type Client @model @auth(rules: [{allow: public}]) {
   id: ID!
   firstName: String
   lastName: String
@@ -25,34 +20,29 @@ type Client @model @auth(rules: [{ allow: public }]) {
   ClientProjects: [Projects] @connection(keyName: "byClient", fields: ["id"])
 }
 
-type Designer @model @auth(rules: [{ allow: public }]) {
+type Designer @model @auth(rules: [{allow: public}]) {
   id: ID!
   firstName: String
   lastName: String
   email: String
-  designerProjects: [Projects]
-    @connection(keyName: "byDesigner", fields: ["id"])
+  designerProjects: [Projects] @connection(keyName: "byDesigner", fields: ["id"])
 }
 
-type Projects
-  @model
-  @auth(rules: [{ allow: public }])
-  @key(name: "byDesigner", fields: ["designerID"])
-  @key(name: "byClient", fields: ["clientID"]) {
+type Projects @model @auth(rules: [{allow: public}]) @key(name: "byDesigner", fields: ["designerID"]) @key(name: "byClient", fields: ["clientID"]) {
   id: ID!
-  Budget: String!
-  designerId: String
-  clientId: String!
-  Status: String!
+  Budget: String
+  Status: String
   SquareMeterage: Int
   ShoppingList: AWSURL
-  Room: String!
+  Room: String
   PresentationBoards: AWSJSON
   Plans: [Plans]
   Designs: [Design]
-  DateStarted: AWSDate!
+  DateStarted: AWSDate
   DateFinished: AWSDate
-  Address: String!
+  Address: String
   designerID: ID
   clientID: ID
+  clientId: String
 }
+ 
